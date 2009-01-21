@@ -1,0 +1,2 @@
+Tic Tac Toe game bot
+Requires two Tic Tac Toe players that respond to makeMove(state) where state is array of 9 characters
