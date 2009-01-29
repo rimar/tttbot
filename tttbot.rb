@@ -14,9 +14,8 @@ class TTTBot
     for i in (1..9)
       newState = @players[i%2].makeMove(state.clone)
       puts("move[#{i}]: #{newState}")
-      legalState = (1..9).count{|x| state[x] != newState[x]} == 1
-      puts("illegal state") if !legalState
-      if (winner?(newState))
+      legalMove?(newState, state)
+     if (winner?(newState))
         return @players[i%2]
       end
       state = newState
@@ -24,6 +23,13 @@ class TTTBot
     return "DRAW"
   end
 
+end
+
+def legalMove?(newState, state)
+  differCount = (1..9).count{|x| state[x] != newState[x]}
+  legal = (differCount == 1)
+  puts("illegal state, count [#{differCount}] ") if !legal
+  return legal
 end
 
 def winner?(currentState)
