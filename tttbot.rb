@@ -11,7 +11,7 @@ class TTTBot
       raise "2 players required" 
     end
     state = ["."] * 9
-    for i in (1..9)
+    for i in (0..8)
       newState = @players[i%2].makeMove(state.clone)
       puts("move[#{i}]: #{newState}")
       legalMove?(newState, state)
@@ -26,7 +26,7 @@ class TTTBot
 end
 
 def legalMove?(newState, state)
-  differCount = (1..9).count{|x| state[x] != newState[x]}
+  differCount = (0..8).count{|x| state[x] != newState[x]}
   legal = (differCount == 1)
   puts("illegal state, count [#{differCount}] ") if !legal
   return legal
