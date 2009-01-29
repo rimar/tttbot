@@ -48,6 +48,5 @@ def line(a, b, c, state)
     'o' == state[a] && 'o' == state[b] && 'o' == state[c]
 end
 
-puts TTTBot.new.run
-
+puts "The winner is: #{TTTBot.new.run}"
 
