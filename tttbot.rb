@@ -12,7 +12,7 @@ class TTTBot
     end
     state = [""] * 9
     for i in (1..9)
-      puts("move: " + i)
+      puts("move: ", i)
       newState = @players[i%2].makeMove(state.clone)
       legalState = (1..9).count{|x| state[x] != newState[x]} == 1
       puts("illegal state") if !legalState
