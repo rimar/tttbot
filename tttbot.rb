@@ -10,7 +10,7 @@ class TTTBot
     if @players.size != 2 
       raise "2 players required" 
     end
-    state = [""] * 9
+    state = ["."] * 9
     for i in (1..9)
       newState = @players[i%2].makeMove(state.clone)
       puts("move[#{i}]: #{newState}")
