@@ -1,7 +1,6 @@
 class TTTBot
 
   def initialize
-    load 'config.rb'
     @players = [$player1, $player2]
   end
 
@@ -50,5 +49,6 @@ def line(a, b, c, state)
     'o' == state[a] && 'o' == state[b] && 'o' == state[c]
 end
 
+load 'config.rb'
 puts "The winner is: #{TTTBot.new.run}"
 
