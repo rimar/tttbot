@@ -16,12 +16,13 @@ class TTTBot
       puts("move[#{i}]: #{newState}")
       if (!legalMove?(newState, state))
         return @player[(i+1)%2]
-        if (winner?(newState))
-          return @players[i%2]
-        end
-        state = newState
       end
-      return "DRAW"
+      if (winner?(newState))
+        return @players[i%2]
+      end
+      state = newState
+    end
+    return "DRAW"
   end
 
 end
