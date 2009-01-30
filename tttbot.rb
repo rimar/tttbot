@@ -49,6 +49,6 @@ def line(a, b, c, state)
     'o' == state[a] && 'o' == state[b] && 'o' == state[c]
 end
 
-load 'config.rb'
+require 'config'
 puts "The winner is: #{TTTBot.new.run}"
 
