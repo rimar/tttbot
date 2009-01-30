@@ -1,6 +1,7 @@
 class TTTBot
 
   def initialize
+    load 'config.rb'
     @players = [$player1, $player2]
   end
 
