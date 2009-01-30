@@ -14,13 +14,14 @@ class TTTBot
     for i in (0..8)
       newState = @players[i%2].makeMove(state.clone)
       puts("move[#{i}]: #{newState}")
-      legalMove?(newState, state)
-     if (winner?(newState))
-        return @players[i%2]
+      if (!legalMove?(newState, state))
+        return @player[(i+1)%2]
+        if (winner?(newState))
+          return @players[i%2]
+        end
+        state = newState
       end
-      state = newState
-    end
-    return "DRAW"
+      return "DRAW"
   end
 
 end
