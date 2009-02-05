@@ -2,10 +2,10 @@
 - bot: 
     id: trp1
     type: tttrandomplayer
- - bot: 
+- bot: 
     id: trp2
     type: tttrandomplayer
- - bot: 
+- bot: 
     id: TicTacToe
     type: tttbot
     properties:
