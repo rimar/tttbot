@@ -27,9 +27,11 @@ class TTTBot
 end
 
 def start
+  puts "TTTBot start"
   for i in (1..20)
     puts "****** GAME #{i} ****** The winner is: #{play()}"
   end
+  puts "TTTBot end"
 end
 
 def legalMove?(newState, state)
