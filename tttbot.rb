@@ -1,7 +1,7 @@
 class TTTBot
 
   def initialize
-    @players = [$player1, $player2]
+    @players = [@player1, @player2]
   end
 
   def play
