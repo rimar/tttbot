@@ -1,0 +1,13 @@
+--- 
+- bot: 
+    id: trp1
+    type: tttrandomplayer
+ - bot: 
+    id: trp2
+    type: tttrandomplayer
+ - bot: 
+    id: TicTacToe
+    type: tttbot
+    properties:
+      player1: trp1
+      player2: trp2

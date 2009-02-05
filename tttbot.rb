@@ -4,7 +4,7 @@ class TTTBot
     @players = [$player1, $player2]
   end
 
-  def run
+  def play
     puts @players
     puts @players.size
     if @players.size != 2 
@@ -24,7 +24,12 @@ class TTTBot
     end
     return "DRAW"
   end
+end
 
+def start
+  for i in (1..20)
+    puts "****** GAME #{i} ****** The winner is: #{play()}"
+  end
 end
 
 def legalMove?(newState, state)
@@ -50,6 +55,6 @@ def line(a, b, c, state)
     'o' == state[a] && 'o' == state[b] && 'o' == state[c]
 end
 
-require 'config'
-puts "The winner is: #{TTTBot.new.run}"
-
+def tttbot
+  TTTBot.new
+end
