@@ -1,10 +1,8 @@
 class TTTBot
 
-  def initialize
-    @players = [@player1, @player2]
-  end
-
   def play
+    @players = [@player1, @player2]
+
     puts @players
     puts @players.size
     if @players.size != 2 
