@@ -2,9 +2,15 @@
 - bot: 
     id: trp1
     type: tttrandomplayer
+    properties:
+      xoro: x
+      name: player1
 - bot: 
     id: trp2
     type: tttrandomplayer
+    properties:
+      xoro: o
+      name: player2
 - bot: 
     id: TicTacToe
     type: tttbot
