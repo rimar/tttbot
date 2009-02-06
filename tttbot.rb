@@ -24,15 +24,17 @@ class TTTBot
     end
     return "DRAW"
   end
+
+  def start
+    puts "TTTBot start"
+    for i in (1..20)
+      puts "****** GAME #{i} ****** The winner is: #{play()}"
+    end
+    puts "TTTBot end"
+  end
+
 end
 
-def start
-  puts "TTTBot start"
-  for i in (1..20)
-    puts "****** GAME #{i} ****** The winner is: #{play()}"
-  end
-  puts "TTTBot end"
-end
 
 def legalMove?(newState, state)
   differCount = (0..8).count{|x| state[x] != newState[x]}
