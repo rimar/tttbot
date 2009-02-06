@@ -14,6 +14,6 @@
 - bot: 
     id: TicTacToe
     type: tttbot
-    properties:
+    bots:
       player1: trp1
       player2: trp2
